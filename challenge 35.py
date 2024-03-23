@@ -1,5 +1,5 @@
 import itertools
-from utils import is_prime
+from mathUtils import is_prime
 
 
 
