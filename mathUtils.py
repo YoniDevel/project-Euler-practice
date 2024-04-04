@@ -1,3 +1,4 @@
+from builtins import int
 import math
 
 def is_prime(n: int) -> bool:
@@ -11,4 +12,13 @@ def is_prime(n: int) -> bool:
             return False
     return True
 
+def is_palindrom(n: int) -> bool:
+    return str(n) == str(n)[::-1];
 
+def reverse_num(n: int) -> int:
+    return int(str(n)[::-1]);
+
+def is_int(n: float) -> bool:
+    return str(n)[str(n).index('.')::] == '.0';
+
+print(is_palindrom(10201));

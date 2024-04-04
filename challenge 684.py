@@ -1,11 +1,11 @@
+from builtins import int
 import math
 
 
 def digitSum(num):
     sum = 0
-    while num != 0:
-        sum += num % 10
-        num //= 10
+    for digit in str(num):
+        sum += int(digit);
     return sum
 
 
@@ -27,7 +27,7 @@ def S(num):
     return sum
 
 
-def fibonacciSequence(index):
+def fibonacciSequence(index: int) -> list[int]:
     l = []
     l.append(0)
     l.append(1)
@@ -35,5 +35,15 @@ def fibonacciSequence(index):
     for i in range(2, index + 1):
         l.append(l[i-2] + l[i - 1])
     return l
+
+def exe():
+    sum: int = 0;
+    fibo: list[int] = fibonacciSequence(90);
+    for num in fibo:
+        print(num);
+        sum += S(num);
+    return sum % 1000000007;
+
+exe()
 
 
